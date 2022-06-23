@@ -5,7 +5,7 @@ public class Main {
 
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "org.h2.Driver";
-    static final String DB_URL = "jdbc:h2:file:C:\\Users\\JJ\\IdeaProjects\\Car Sharing\\Car Sharing\\task\\src\\carsharing\\db\\carsharing;IFEXISTS=TRUE";
+    static final String DB_URL = "jdbc:h2:file:C:\\Users\\JJ\\IdeaProjects\\CarSharingBackUp\\src\\main\\java\\db\\db";
 
     //  Database credentials
     static final String USER = "sa";
@@ -20,8 +20,9 @@ public class Main {
 
         //Creating Table
         CreateTable.createTable(conn, stmt);
-        InsertTable.insertTable(conn, stmt);
+        //InsertTable.insertTable(conn, stmt);
         ReadTable.readTable(conn, stmt);
+        ReadTable.readTableID();
         //isTableExists(stmt, tableExists);
 
     }
