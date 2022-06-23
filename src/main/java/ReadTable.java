@@ -64,6 +64,7 @@ public class ReadTable {
 
         Connection conn = null;
         Statement stmt = null;
+        String result = null;
         try {
             // Register JDBC driver
             Class.forName(Main.JDBC_DRIVER);
@@ -73,20 +74,22 @@ public class ReadTable {
 
             //Execute a query
             stmt = conn.createStatement();
-            String sql = "SELECT id, name FROM company WHERE id IN (1)";
-            ResultSet rs = stmt.executeQuery(sql);
+
 
             // Extract data from result set
 
             // Retrieve by column name
-            int id = rs.getInt("id");
-
-            String name = rs.getString("name");
-
-            //Display values
-            System.out.println(id + ". " + name);
+            String sql = "SELECT name FROM company WHERE id =1";
 
 
+            ResultSet rs = stmt.executeQuery(sql);
+
+            if (rs.next()) {
+                result = rs.getString("name");
+            }
+            System.out.println(result);
+
+            conn.setAutoCommit(true);
             //Clean-up environment
             rs.close();
         } catch (SQLException se) {

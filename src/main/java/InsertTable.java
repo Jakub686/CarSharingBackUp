@@ -26,7 +26,7 @@ public class InsertTable {
             // STEP 3: Execute a query
             stmt = conn.createStatement();
 
-            String sql = "INSERT INTO COMPANY " + "VALUES (101, 'Za5435a')";
+            String sql = "INSERT INTO COMPANY(name) VALUES('bb')";
             stmt.executeUpdate(sql);
 
 //            sql = "INSERT INTO COMPANY " + "VALUES (105, 'Mahnaz')";

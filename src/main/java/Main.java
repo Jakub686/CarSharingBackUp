@@ -21,7 +21,7 @@ public class Main {
         //Creating Table
         CreateTable.createTable(conn, stmt);
         //InsertTable.insertTable(conn, stmt);
-        ReadTable.readTable(conn, stmt);
+        //ReadTable.readTable(conn, stmt);
         ReadTable.readTableID();
         //isTableExists(stmt, tableExists);
 
