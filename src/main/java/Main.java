@@ -22,7 +22,7 @@ public class Main {
         CreateTable.createTable(conn, stmt);
         //InsertTable.insertTable(conn, stmt);
         //ReadTable.readTable(conn, stmt);
-        ReadTable.readTableID();
+        ReadTable.readTableCompanyName();
         //isTableExists(stmt, tableExists);
 
     }

@@ -60,7 +60,7 @@ public class ReadTable {
         } // end try
     }
 
-    public static void readTableID() {
+    public static void readTableCompanyName() {
 
         Connection conn = null;
         Statement stmt = null;
@@ -87,7 +87,7 @@ public class ReadTable {
             if (rs.next()) {
                 result = rs.getString("name");
             }
-            System.out.println(result);
+            System.out.println("'Company name'"+ result);
 
             conn.setAutoCommit(true);
             //Clean-up environment
